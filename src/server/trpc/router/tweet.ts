@@ -1,16 +1,9 @@
-import { z } from "zod";
+// import { z } from "zod";
+import { tweetSchema } from "../../../components/CreateTweet";
 import { protectedProcedure, router } from "../trpc";
 
 export const tweetrouter = router({
-  create: protectedProcedure //made property here
-    .input(
-      z.object({
-        text: z.string({
-          required_error: "Tweet is required",
-        }),
-      })
-    )
-    .mutation(({ context, input }) => {
+    create: protectedProcedure.input(tweetSchema).mutation(({ context, input }) => {
       // here is a callback
       const { prisma, session } = context;
       const { text } = input;
