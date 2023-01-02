@@ -19,9 +19,7 @@ const Home: NextPage = () => {
       </Head>
       <div>
         {/* function scomes fromm nextauth/react */}
-        <button onClick={()=>signIn()}>
-          Login
-        </button>
+        
 
         <Timeline/>
       </div>
