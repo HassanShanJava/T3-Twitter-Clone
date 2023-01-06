@@ -26,7 +26,7 @@ async function run() {
   const tweets = [];
 
   for (let i = 0; i < users.length; i++) {
-    const amount = faker.datatype.number({ min: TWEETS_MIN, max: TWEETS_MAX }); //random no. between 1 & 20
+    const amount = faker.datatype.number({ min: TWEETS_MIN, max: TWEETS_MAX }); //random numbers between 1 and 20
 
     for (let ii = 0; ii < amount; ii++) {
       tweets.push({
